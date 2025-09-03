@@ -117,3 +117,7 @@ img{
 .bottom {
   transform: translateY(40px);
 }
+
+.left {
+  transform: translateX(-50px);
+}
