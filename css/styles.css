@@ -109,3 +109,7 @@ img{
 .giro {
   animation: girar 3s linear infinite;
 }
+
+.topp {
+  transform: translateY(-40px);
+}
