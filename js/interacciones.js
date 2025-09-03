@@ -10,9 +10,17 @@ function estrella(){
     figuras.style.backgroundColor = "gold";
 }
 
+function gif(){
+    figuras.style.backgroundImage = "url('img/gif1.gif')";
+    figuras.style.backgroundColor = "white";
+    figuras.style.backgroundSize = "cover";
+    figuras.style.backgroundPosition = "center"
+}
+
 
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella);
+    document.getElementById('btnGif').addEventListener('click', gif);
 })
