@@ -36,6 +36,10 @@ function mover_izq(){
     figuras.style.backgroundColor = "red";
 }
 
+function mover_der(){
+    figuras.classList.toggle("right");
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -45,4 +49,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveUp').addEventListener('click', mover_arri);
     document.getElementById('btnMoveDown').addEventListener('click', mover_aba);
     document.getElementById('btnMoveLeft').addEventListener('click', mover_izq);
+    document.getElementById('btnMoveRight').addEventListener('click', mover_der);
 })
