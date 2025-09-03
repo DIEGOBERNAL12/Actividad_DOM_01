@@ -17,10 +17,14 @@ function gif(){
     figuras.style.backgroundPosition = "center"
 }
 
-
+function animation(){
+    figuras.classList.add("giro");
+    figuras.style.backgroundColor = "yellow";
+}
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella);
     document.getElementById('btnGif').addEventListener('click', gif);
+    document.getElementById('btnAnim').addEventListener('click', animation);
 })

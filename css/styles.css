@@ -100,3 +100,12 @@ img{
     margin-top: 20px;
     display: block;
 }
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.giro {
+  animation: girar 3s linear infinite;
+}
