@@ -26,6 +26,11 @@ function mover_arri(){
     figuras.classList.toggle("topp");
 }
 
+function mover_aba(){
+    figuras.classList.toggle("bottom");
+    figuras.style.backgroundColor = "green";
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -33,4 +38,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnGif').addEventListener('click', gif);
     document.getElementById('btnAnim').addEventListener('click', animation);
     document.getElementById('btnMoveUp').addEventListener('click', mover_arri);
+    document.getElementById('btnMoveDown').addEventListener('click', mover_aba);
 })
