@@ -139,9 +139,17 @@ function cambiarImgSig(){
     if (indice >= imagenes.length){
         indice = 0;
     }
-
-
 }
+
+function cambiarImgAtr(){
+    const imagenesS = document.getElementById('mainImage').src = imagenes[indice];
+    indice--;
+
+    if (indice < 0){
+        indice = imagenes.length - 1;
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -159,4 +167,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnHexColor').addEventListener('click', cColor);
     document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
     document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImgSig);
+    document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImgAtr);
 })
