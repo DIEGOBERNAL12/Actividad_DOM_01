@@ -40,6 +40,17 @@ function mover_der(){
     figuras.classList.toggle("right");
 }
 
+// funciones de contenido
+
+function nTitulo(){
+    const nuevoT = document.getElementById('mainTitle');
+    const add_titulo = prompt('Agregue un nuevo Titulo');
+
+    if (add_titulo) {
+        nuevoT.textContent = add_titulo;
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -50,4 +61,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveDown').addEventListener('click', mover_aba);
     document.getElementById('btnMoveLeft').addEventListener('click', mover_izq);
     document.getElementById('btnMoveRight').addEventListener('click', mover_der);
+    document.getElementById('btnChangeTitle').addEventListener('click', nTitulo);
 })
