@@ -102,6 +102,28 @@ function cColor(){
     figura2.style.backgroundColor = valor;
 }
 
+function elegirFigura(){
+    const figura = document.getElementById('figure');
+    const elegir = prompt('Elige cualquiera de las siguientes figuras: ciiculo, estrella triangulo.');
+
+    switch (elegir) {
+        case "circulo":
+            figura.style.borderRadius = '50%';
+            break;
+
+        case "estrella":
+            figura.style.clipPath = "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)";
+            break;
+    
+        case "triangulo":
+            figura.style.clipPath = "polygon(50% 0%, 0% 100%, 100% 100%)";
+            break;
+
+        default:
+            alert('No selecciono alguna de las opciones.')
+            break;
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -117,4 +139,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnAddParagraph').addEventListener('click', agregarParr);
     document.getElementById('btnRemoveParagraph').addEventListener('click', eliminarParr);
     document.getElementById('btnHexColor').addEventListener('click', cColor);
+    document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
 })
