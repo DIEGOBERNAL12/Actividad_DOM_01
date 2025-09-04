@@ -150,6 +150,17 @@ function cambiarImgAtr(){
     }
 }
 
+function mostrarYOcultar() {
+  const img = document.getElementById("mainImage");
+
+  if (img.style.display === "none") {
+    img.style.display = "block"; //este es el de mostrar
+    img.style.margin = "0 auto"; // asegura que este centrado
+  } else {
+    img.style.display = "none"; // y este es de ocultar
+  }
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -168,4 +179,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
     document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImgSig);
     document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImgAtr);
+    document.getElementById('btnToggleImage').addEventListener('click', mostrarYOcultar);
 })
