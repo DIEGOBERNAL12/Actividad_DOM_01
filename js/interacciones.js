@@ -160,6 +160,14 @@ function mostrarYOcultar() {
   }
 }
 
+function cambioAlt(){
+    const altImg = document.getElementById('mainImage');
+    const nuevoAlt = prompt('agregue un nuevo alt a la imagen');
+
+    altImg.setAttribute("alt", nuevoAlt);
+    alert('El atributo ALT se cambio a :' + nuevoAlt);
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -179,4 +187,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImgSig);
     document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImgAtr);
     document.getElementById('btnToggleImage').addEventListener('click', mostrarYOcultar);
+    document.getElementById('btnChangeAlt').addEventListener('click', cambioAlt);
 })
