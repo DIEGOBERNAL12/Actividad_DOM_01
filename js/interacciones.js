@@ -86,6 +86,22 @@ function eliminarParr() {
     otroParrafo.textContent = "";
 }
 
+// funciones de atributos
+
+function cColor(){
+    const figura2 = document.getElementById('figure');
+    const color = prompt('ingresa un color en formato #HEX.');
+
+    switch (color) {
+        case null:
+        case "":
+            alert('Ingrese algo valido');
+            return;
+    }
+    const valor = color.trim();
+    figura2.style.backgroundColor = valor;
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -100,4 +116,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeParagraph').addEventListener('click', nParrafo);
     document.getElementById('btnAddParagraph').addEventListener('click', agregarParr);
     document.getElementById('btnRemoveParagraph').addEventListener('click', eliminarParr);
+    document.getElementById('btnHexColor').addEventListener('click', cColor);
 })
