@@ -66,6 +66,21 @@ function nParrafo(){
     }
 }
 
+function agregarParr(){
+    const otroParrafo = document.getElementById('extraParagraphs');
+    const new_parrafo = prompt('Ingrese un parrafo, el que quiera.');
+
+    switch (new_parrafo) {
+        case null:
+        case "":
+            alert('No ingresaste nada, ponga algo o no le servira.');
+            break;
+        default:
+            otroParrafo.textContent = new_parrafo;
+            break;
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -78,4 +93,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveRight').addEventListener('click', mover_der);
     document.getElementById('btnChangeTitle').addEventListener('click', nTitulo);
     document.getElementById('btnChangeParagraph').addEventListener('click', nParrafo);
+    document.getElementById('btnAddParagraph').addEventListener('click', agregarParr);
 })
