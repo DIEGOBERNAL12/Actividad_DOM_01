@@ -81,6 +81,11 @@ function agregarParr(){
     }
 }
 
+function eliminarParr() {
+    const otroParrafo = document.getElementById('extraParagraphs');
+    otroParrafo.textContent = "";
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -94,4 +99,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeTitle').addEventListener('click', nTitulo);
     document.getElementById('btnChangeParagraph').addEventListener('click', nParrafo);
     document.getElementById('btnAddParagraph').addEventListener('click', agregarParr);
+    document.getElementById('btnRemoveParagraph').addEventListener('click', eliminarParr);
 })
