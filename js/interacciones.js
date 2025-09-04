@@ -155,7 +155,6 @@ function mostrarYOcultar() {
 
   if (img.style.display === "none") {
     img.style.display = "block"; //este es el de mostrar
-    img.style.margin = "0 auto"; // asegura que este centrado
   } else {
     img.style.display = "none"; // y este es de ocultar
   }
