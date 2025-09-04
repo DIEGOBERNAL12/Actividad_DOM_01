@@ -176,6 +176,12 @@ function cambiarEnlace(){
     alert('El enlace ya esta asignado y redirecciona a otra pagina:' + nuevoEnl);
 }
 
+function abrirNewPest(){
+    const enlace = document.getElementById('mainLink');
+
+    enlace.setAttribute("target", "_blank");
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -197,4 +203,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnToggleImage').addEventListener('click', mostrarYOcultar);
     document.getElementById('btnChangeAlt').addEventListener('click', cambioAlt);
     document.getElementById('btnChangeLink').addEventListener('click', cambiarEnlace);
+    document.getElementById('btnOpenLink').addEventListener('click', abrirNewPest);
 })
