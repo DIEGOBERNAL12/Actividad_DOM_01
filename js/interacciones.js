@@ -168,6 +168,14 @@ function cambioAlt(){
     alert('El atributo ALT se cambio a :' + nuevoAlt);
 }
 
+function cambiarEnlace(){
+    const enlDeA = document.getElementById('mainLink');
+    const nuevoEnl = prompt('Ingrese el nuevo enlace que quiera');
+
+    enlDeA.setAttribute("href", nuevoEnl);
+    alert('El enlace ya esta asignado y redirecciona a otra pagina:' + nuevoEnl);
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -188,4 +196,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImgAtr);
     document.getElementById('btnToggleImage').addEventListener('click', mostrarYOcultar);
     document.getElementById('btnChangeAlt').addEventListener('click', cambioAlt);
+    document.getElementById('btnChangeLink').addEventListener('click', cambiarEnlace);
 })
