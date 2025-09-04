@@ -51,6 +51,21 @@ function nTitulo(){
     }
 }
 
+function nParrafo(){
+    const nuevoP = document.getElementById('mainParagraph');
+    const add_parrafo = prompt('Agregur un Parrafo Nuevo');
+
+    switch (add_parrafo) {
+        case null:
+        case "":
+            alert('Hubo un error, no ingreso nada, Vuelva a intentar');
+            break;
+        default:
+            nuevoP.textContent = add_parrafo;
+            break;
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -62,4 +77,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnMoveLeft').addEventListener('click', mover_izq);
     document.getElementById('btnMoveRight').addEventListener('click', mover_der);
     document.getElementById('btnChangeTitle').addEventListener('click', nTitulo);
+    document.getElementById('btnChangeParagraph').addEventListener('click', nParrafo);
 })
