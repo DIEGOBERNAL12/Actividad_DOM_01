@@ -125,6 +125,24 @@ function elegirFigura(){
     }
 }
 
+const imagenes = [
+        "img/imagen.jpg",
+        "img/imagen2.jpg",
+        "img/imagen3.jpg"
+    ];
+let indice = 0;    
+
+function cambiarImgSig(){
+    const imagenesS = document.getElementById('mainImage').src = imagenes[indice];
+    indice++;
+
+    if (indice >= imagenes.length){
+        indice = 0;
+    }
+
+
+}
+
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella);
@@ -140,4 +158,5 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnRemoveParagraph').addEventListener('click', eliminarParr);
     document.getElementById('btnHexColor').addEventListener('click', cColor);
     document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
+    document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImgSig);
 })
